@@ -13,15 +13,11 @@ btnStart.addEventListener('click', () => {
   timerId = setInterval(() => {
     bodyEl.style.backgroundColor = getRandomHexColor();
     btnStart.setAttribute('disabled', false);
-  }, 500);
+  }, 1000);
 });
 
-btnStop.addEventListener(
-  'click',
-  () => {
-    clearInterval(timerId);
-    btnStart.setAttribute('disabled', true);
-    btnStart.removeAttribute('disabled');
-  },
-  500
-);
+btnStop.addEventListener('click', () => {
+  clearInterval(timerId);
+  btnStart.setAttribute('disabled', true);
+  btnStart.removeAttribute('disabled');
+});

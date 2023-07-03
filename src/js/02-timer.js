@@ -62,7 +62,7 @@ function addLeadingZero(value) {
 }
 
 function startCount() {
-  countInt = setInterval(() => {
+  const countInt = setInterval(() => {
     const currentTime = new Date().getTime();
     const differenceOfTime = selectedDate - currentTime;
     if (differenceOfTime <= 0) {
