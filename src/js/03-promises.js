@@ -24,7 +24,7 @@ function callPromise(event) {
   const stepValue = Number(stepEl.value);
   const amountValue = Number(amountEl.value);
 
-  for (let index = 1; index < amountValue; index += 1) {
+  for (let index = 1; index <= amountValue; index += 1) {
     createPromise(index, delayValue)
       .then(({ position, delay }) => {
         Notiflix.Notify.success(
